@@ -1,0 +1,33 @@
+<div>
+  <ion-text>
+    <h1>Convertidor de Monedas</h1>
+  </ion-text>
+
+  
+  <ion-input type="number" placeholder="Ingrese la cantidad" [(ngModel)]="cantidad"></ion-input>
+
+  
+  <ion-select [(ngModel)]="monedaOrigen" placeholder="Moneda de origen">
+    <ion-select-option value="MXN">Peso Mexicano (MXN)</ion-select-option>
+    <ion-select-option value="USD">Dólar Estadounidense (USD)</ion-select-option>
+    <ion-select-option value="EUR">Euro (EUR)</ion-select-option>
+  </ion-select>
+
+  
+  <ion-select [(ngModel)]="monedaDestino" placeholder="Moneda destino">
+    <ion-select-option value="MXN">Peso Mexicano (MXN)</ion-select-option>
+    <ion-select-option value="USD">Dólar Estadounidense (USD)</ion-select-option>
+    <ion-select-option value="EUR">Euro (EUR)</ion-select-option>
+  </ion-select>
+
+  
+  <ion-button (click)="convertir()" expand="block" shape="round">
+    Convertir
+  </ion-button>
+
+  
+  <ion-text>
+    <h1>{{ resultado }}</h1>
+  </ion-text>
+</div>
+
